@@ -30,7 +30,6 @@ void loop()
 
 void constante_schraege_ebene()
 {
-   
    for (byte k=0; k<XYZ_SIZE; k++)
    {
     Clearbitmap();
@@ -38,16 +37,15 @@ void constante_schraege_ebene()
      {
       for (byte y=0; y<XYZ_SIZE; y++)
       {
-        //if(XYZ_SIZE+k-y<=4)
+        if(XYZ_SIZE+k-y<=4)
         {
-        bitmap.v4x4x4[x][y][(XYZ_SIZE+k-y)%4]=1;
+        bitmap.v4x4x4[x][y][(XYZ_SIZE+k-y)]=1;
         }
       }
      }
      CopyToDisplay();
    delay(velocity);
    }
-   
 }
 
 
